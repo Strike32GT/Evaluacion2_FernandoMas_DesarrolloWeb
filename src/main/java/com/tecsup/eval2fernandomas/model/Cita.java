@@ -1,12 +1,12 @@
 package com.tecsup.eval2fernandomas.model;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
+@Table(name = "Cita")
 public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

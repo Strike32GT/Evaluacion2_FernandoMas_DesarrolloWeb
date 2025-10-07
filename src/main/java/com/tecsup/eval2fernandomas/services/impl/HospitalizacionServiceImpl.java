@@ -3,9 +3,11 @@ package com.tecsup.eval2fernandomas.services.impl;
 import com.tecsup.eval2fernandomas.model.Hospitalizacion;
 import com.tecsup.eval2fernandomas.repository.HospitalizacionRepository;
 import com.tecsup.eval2fernandomas.services.HospitalizacionService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class HospitalizacionServiceImpl implements HospitalizacionService {
 
     private final HospitalizacionRepository hospitalizacionRepository;

@@ -3,9 +3,11 @@ package com.tecsup.eval2fernandomas.services.impl;
 import com.tecsup.eval2fernandomas.model.Medico;
 import com.tecsup.eval2fernandomas.repository.MedicoRepository;
 import com.tecsup.eval2fernandomas.services.MedicoService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MedicoServiceImpl implements MedicoService {
 
     private final MedicoRepository medicoRepository;

@@ -3,6 +3,7 @@ package com.tecsup.eval2fernandomas.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "DetalleReceta")
 public class DetalleReceta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

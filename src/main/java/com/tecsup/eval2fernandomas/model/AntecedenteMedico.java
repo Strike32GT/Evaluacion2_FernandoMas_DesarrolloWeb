@@ -1,10 +1,11 @@
 package com.tecsup.eval2fernandomas.model;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
+@Entity
+@Table(name = "AntecedenteMedico")
 public class AntecedenteMedico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

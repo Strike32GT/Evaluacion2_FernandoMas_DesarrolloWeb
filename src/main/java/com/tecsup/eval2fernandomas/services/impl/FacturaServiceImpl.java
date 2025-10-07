@@ -3,9 +3,11 @@ package com.tecsup.eval2fernandomas.services.impl;
 import com.tecsup.eval2fernandomas.model.Factura;
 import com.tecsup.eval2fernandomas.repository.FacturaRepository;
 import com.tecsup.eval2fernandomas.services.FacturaService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class FacturaServiceImpl implements FacturaService {
 
     private final FacturaRepository facturaRepository;

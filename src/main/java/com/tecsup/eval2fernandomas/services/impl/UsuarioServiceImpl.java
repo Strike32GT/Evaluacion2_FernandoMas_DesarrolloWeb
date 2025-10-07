@@ -3,9 +3,11 @@ package com.tecsup.eval2fernandomas.services.impl;
 import com.tecsup.eval2fernandomas.model.Usuario;
 import com.tecsup.eval2fernandomas.repository.UsuarioRepository;
 import com.tecsup.eval2fernandomas.services.UsuarioService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
     private final UsuarioRepository usuarioRepository;

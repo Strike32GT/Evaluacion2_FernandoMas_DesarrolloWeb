@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.*;
 
 @Entity
+@Table(name = "Hospitalizacion")
 public class Hospitalizacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

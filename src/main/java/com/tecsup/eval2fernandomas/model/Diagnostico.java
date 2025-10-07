@@ -2,6 +2,7 @@ package com.tecsup.eval2fernandomas.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "Diagnostico")
 public class Diagnostico {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

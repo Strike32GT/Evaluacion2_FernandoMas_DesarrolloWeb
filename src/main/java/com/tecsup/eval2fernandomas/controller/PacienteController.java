@@ -1,6 +1,7 @@
 package com.tecsup.eval2fernandomas.controller;
 
 import com.tecsup.eval2fernandomas.model.Paciente;
+import com.tecsup.eval2fernandomas.services.PacienteService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
