@@ -17,26 +17,26 @@ public class BitacoraServiceImpl implements BitacoraService {
 
     @Override
     public Bitacora registrar(Bitacora bitacora) {
-        return null;
+        return bitacoraRepository.save(bitacora);
     }
 
     @Override
     public Bitacora actualizar(Bitacora bitacora) {
-        return null;
+        return bitacoraRepository.save(bitacora);
     }
 
     @Override
     public void eliminar(Long id) {
-
+        bitacoraRepository.deleteById(id);
     }
 
     @Override
     public Bitacora obtenerPorId(Long id) {
-        return null;
+        return bitacoraRepository.findById(id).orElse(null);
     }
 
     @Override
     public List<Bitacora> listar() {
-        return null;
+        return bitacoraRepository.findAll();
     }
 }
