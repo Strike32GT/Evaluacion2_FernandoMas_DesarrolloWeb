@@ -9,19 +9,17 @@ import java.util.List;
 public class AntecedenteMedico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idAntecedente")
     private Long idAntecedente;
 
     @ManyToOne
-    @JoinColumn(name = "idHistoria")
+    @JoinColumn(name = "idHistoria",referencedColumnName = "idHistoria")
     private HistoriaClinica historiaClinica;
 
-    @Enumerated(EnumType.STRING)
-    private Tipo tipo;
+    @Column(name = "tipo")
+    private String tipo;
+    @Column(name = "descripcion")
     private String descripcion;
-
-    public enum Tipo{
-        alergias,enfermedades_previas,cirugias
-    }
 
     public Long getIdAntecedente() {
         return idAntecedente;
@@ -39,11 +37,11 @@ public class AntecedenteMedico {
         this.historiaClinica = historiaClinica;
     }
 
-    public Tipo getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(Tipo tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 

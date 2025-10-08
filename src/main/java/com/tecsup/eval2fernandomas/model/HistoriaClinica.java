@@ -9,7 +9,8 @@ import java.util.List;
 public class HistoriaClinica {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Historia;
+    @Column(name = "idHistoria")
+    private Long idHistoria;
 
     @ManyToOne
     @JoinColumn(name = "idPaciente")
@@ -21,12 +22,12 @@ public class HistoriaClinica {
     @OneToMany(mappedBy = "historiaClinica")
     private List<AntecedenteMedico> antecedentes;
 
-    public Long getHistoria() {
-        return Historia;
+    public Long getIdHistoria() {
+        return idHistoria;
     }
 
-    public void setHistoria(Long historia) {
-        Historia = historia;
+    public void setIdHistoria(Long idHistoria) {
+        this.idHistoria = idHistoria;
     }
 
     public Paciente getPaciente() {

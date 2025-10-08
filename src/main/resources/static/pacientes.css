@@ -1,0 +1,73 @@
+.pacientes-list {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.pacientes-list h2 {
+    margin-bottom: 20px;
+    color: #2a9df4;
+}
+
+.btn-crear {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #2a9df4;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-crear:hover {
+    background-color: #1d7ac6;
+}
+
+.tabla-pacientes {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tabla-pacientes th {
+    background-color: #2a9df4;
+    color: white;
+    padding: 10px 15px;
+}
+
+.tabla-pacientes td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-pacientes tr:hover {
+    background-color: #f1f9ff;
+}
+
+.btn-editar {
+    color: white;
+    background-color: #28a745;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #1e7e34;
+}
+
+.btn-eliminar {
+    color: white;
+    background-color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-eliminar:hover {
+    background-color: #bd2130;
+}

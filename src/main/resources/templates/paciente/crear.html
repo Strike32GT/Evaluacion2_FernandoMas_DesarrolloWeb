@@ -1,0 +1,63 @@
+<div th:fragment="content" class="paciente-form">
+<h2>Crear Paciente</h2>
+<form th:action="@{/pacientes/crear}" th:object="${paciente}" method="post">
+
+
+    <div class="form-group">
+        <label>DNI</label>
+        <input type="text" th:field="*{dni}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Nombres:</label>
+        <input type="text" th:field="*{nombres}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Apellidos:</label>
+        <input type="text" th:field="*{apellidos}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Fecha_Nacimiento:</label>
+        <input type="text" th:field="*{fechaNacimiento}" placeholder="yyyy-MM-dd" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Sexo:</label>
+        <input type="text" th:field="*{sexo}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Direccion:</label>
+        <input type="text" th:field="*{direccion}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Telefono:</label>
+        <input type="text" th:field="*{telefono}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Correo:</label>
+        <input type="email" th:field="*{correo}" required>
+    </div>
+
+    <div class="form-group">
+        <label>Estado</label>
+        <select th:field="*{estado}">
+            <option th:value="activo">Activo</option>
+            <option th:value="inactivo">Inactivo</option>
+        </select><br/><br/>
+    </div>
+
+    <button type="submit" class="btn-crear">Guardar</button>
+</form>
+</div>
