@@ -6,10 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @Controller
 @RequestMapping("/pacientes")
 public class PacienteController {
+
     private final PacienteService pacienteService;
 
     public PacienteController(PacienteService pacienteService) {
@@ -17,13 +20,21 @@ public class PacienteController {
     }
 
     @GetMapping
-    public String listar(Model model){
-        model.addAttribute("pacientes",pacienteService.listar());
-        model.addAttribute("pageCss","/pacientes.css");
-        model.addAttribute("contentFragment", "paciente/listar :: content");
+    public String pacientePrincipal(){
         return "layout";
     }
 
+    @GetMapping("/data")
+    @ResponseBody
+    public List<Paciente> obtenerPacientes() {
+        return pacienteService.listar();
+    }
 
+    // === Carga una vista parcial ===
+    @GetMapping("/contenido")
+    public String contenidoPacientes(Model model) {
+        model.addAttribute("pacientes", pacienteService.listar());
+        return "forward:/paciente/listar.html";  // templates/paciente/listar.html
+    }
 
 }
