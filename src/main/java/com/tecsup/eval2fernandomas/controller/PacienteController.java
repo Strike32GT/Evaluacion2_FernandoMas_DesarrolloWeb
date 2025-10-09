@@ -34,7 +34,22 @@ public class PacienteController {
     @GetMapping("/contenido")
     public String contenidoPacientes(Model model) {
         model.addAttribute("pacientes", pacienteService.listar());
-        return "forward:/paciente/listar.html";  // templates/paciente/listar.html
+        return "forward:/paciente/listar.html";
+    }
+
+    @PostMapping
+    @ResponseBody
+    public String crearPaciente(@RequestBody Paciente paciente){
+        pacienteService.registrar(paciente);
+        return "Paciente creado exitosamente";
+    }
+
+
+    @DeleteMapping("/{id}")
+    @ResponseBody
+    public String eliminarPaciente(@PathVariable Long id){
+        pacienteService.eliminar(id);
+        return "Paciente eliminado correctamente";
     }
 
 }

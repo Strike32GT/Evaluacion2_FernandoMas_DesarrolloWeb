@@ -36,11 +36,15 @@
     background-color: #2a9df4;
     color: white;
     padding: 10px 15px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .tabla-pacientes td {
     padding: 10px 15px;
     border-bottom: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .tabla-pacientes tr:hover {
@@ -50,24 +54,37 @@
 .btn-editar {
     color: white;
     background-color: #28a745;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 7px 14px;
+    border-radius: 8px;
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
     margin-right: 5px;
 }
 
 .btn-editar:hover {
     background-color: #1e7e34;
+    transform: scale(1.05);
 }
 
 .btn-eliminar {
+    display: inline-block;
     color: white;
     background-color: #dc3545;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
     text-decoration: none;
+    margin-left: 3px;
 }
 
 .btn-eliminar:hover {
     background-color: #bd2130;
+    transform: scale(1.07);
 }

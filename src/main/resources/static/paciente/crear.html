@@ -1,63 +1,62 @@
-<div th:fragment="content" class="paciente-form">
-<h2>Crear Paciente</h2>
-<form th:action="@{/pacientes/crear}" th:object="${paciente}" method="post">
+<link rel="stylesheet" href="/paciente/crear-paciente.css">
 
+<div class="paciente-form">
+    <h2>Crear Paciente</h2>
+    <form id="form-crear-paciente">
 
-    <div class="form-group">
-        <label>DNI</label>
-        <input type="text" th:field="*{dni}" required>
-    </div>
+        <div class="form-group">
+            <label>DNI</label>
+            <input type="text" id="dni" required>
+        </div>
 
+        <div class="form-group">
+            <label>Nombres:</label>
+            <input type="text" id="nombres" required>
+        </div>
 
-    <div class="form-group">
-        <label>Nombres:</label>
-        <input type="text" th:field="*{nombres}" required>
-    </div>
+        <div class="form-group">
+            <label>Apellidos:</label>
+            <input type="text" id="apellidos" required>
+        </div>
 
+        <div class="form-group">
+            <label>Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required>
+        </div>
 
-    <div class="form-group">
-        <label>Apellidos:</label>
-        <input type="text" th:field="*{apellidos}" required>
-    </div>
+        <div class="form-group">
+            <label>Sexo:</label>
+            <select id="sexo" required>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+            </select>
+        </div>
 
+        <div class="form-group">
+            <label>Direccion:</label>
+            <input type="text" id="direccion" required>
+        </div>
 
-    <div class="form-group">
-        <label>Fecha_Nacimiento:</label>
-        <input type="text" th:field="*{fechaNacimiento}" placeholder="yyyy-MM-dd" required>
-    </div>
+        <div class="form-group">
+            <label>Telefono:</label>
+            <input type="text" id="telefono" required maxlength="9">
+        </div>
 
+        <div class="form-group">
+            <label>Correo:</label>
+            <input type="email" id="correo" required>
+        </div>
 
-    <div class="form-group">
-        <label>Sexo:</label>
-        <input type="text" th:field="*{sexo}" required>
-    </div>
+        <div class="form-group">
+            <label>Estado:</label>
+            <select id="estado" required>
+                <option value="activo">Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+        </div>
 
-
-    <div class="form-group">
-        <label>Direccion:</label>
-        <input type="text" th:field="*{direccion}" required>
-    </div>
-
-
-    <div class="form-group">
-        <label>Telefono:</label>
-        <input type="text" th:field="*{telefono}" required>
-    </div>
-
-
-    <div class="form-group">
-        <label>Correo:</label>
-        <input type="email" th:field="*{correo}" required>
-    </div>
-
-    <div class="form-group">
-        <label>Estado</label>
-        <select th:field="*{estado}">
-            <option th:value="activo">Activo</option>
-            <option th:value="inactivo">Inactivo</option>
-        </select><br/><br/>
-    </div>
-
-    <button type="submit" class="btn-crear">Guardar</button>
-</form>
+        <button type="submit" class="btn-crear">Guardar</button>
+    </form>
 </div>
+
+<script src="/paciente/crear.js"></script>
