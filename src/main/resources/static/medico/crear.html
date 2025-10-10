@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/medico/">
+<div>
+  <h2>Crear Medico</h2>
+  <form id="form-crear-medico">
+
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" id="nombre" required>
+    </div>
+
+
+    <div class="form-group">
+      <label>Apellidos:</label>
+      <input type="text" id="apellidos" required>
+    </div>
+
+
+    <div class="form-group">
+      <label>Colegiatura:</label>
+      <input type="text" id="colegiatura" required maxlength="8">
+    </div>
+
+
+    <div class="form-group">
+      <label>Telefono:</label>
+      <input type="text" id="telefono" required maxlength="9">
+    </div>
+
+
+    <div class="form-group">
+      <label>Correo:</label>
+      <input type="email" id="correo" required>
+    </div>
+
+    <div class="form-group">
+      <label>Estado:</label>
+      <select id="estado" required>
+        <option value="activo">Activo</option>
+        <option value="inactivo">Inactivo</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn-crear">Guardar</button>
+  </form>
+</div>
