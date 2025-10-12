@@ -1,0 +1,99 @@
+.medico-form {
+    max-width: 420px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 25px 30px;
+    transition: all 0.3s ease;
+    animation: aparecer 0.4s ease;
+}
+
+.medico-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* === Título === */
+.medico-form h2 {
+    text-align: center;
+    color: #1f3c88;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* === Grupos de campos === */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #1f3c88;
+    box-shadow: 0 0 0 2px rgba(31, 60, 136, 0.15);
+}
+
+/* === Botón de actualizar === */
+.btn-crear {
+    display: block;
+    width: 100%;
+    background-color: #2c8e67;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-crear:hover {
+    background-color: #257a58;
+    transform: scale(1.02);
+}
+
+.btn-crear:active {
+    background-color: #1f6548;
+}
+
+select {
+    background-color: white;
+}
+
+/* === Animación sutil === */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

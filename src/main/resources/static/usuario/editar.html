@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/usuario/editar.css">
+<div class="usuario-form">
+    <h2>Editar Usuario</h2>
+    <form id="form-editar-usuario">
+        <input type="hidden" id="idUsuario">
+
+
+        <div class="form-group">
+            <label>Usuario:</label>
+            <input type="text" id="user" required>
+        </div>
+
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" id="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Rol:</label>
+            <select id="rol" required>
+                <option value="admin">Admin</option>
+                <option value="medico">Medico</option>
+                <option value="recepcionista">Recepcionista</option>
+                <option value="enfermera">Enfermera</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn-crear">Actualizar</button>
+    </form>
+</div>
+<script src="/usuario/editar.js"></script>
+

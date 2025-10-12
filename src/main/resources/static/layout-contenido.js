@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let modulo = '';
     if (path.includes('/pacientes')) modulo = 'paciente';
     else if (path.includes('/medicos')) modulo = 'medico';
+    else if (path.includes('/usuarios'))modulo='usuario';
     else {
         console.warn('No se reconoce el módulo en la URL:', path);
         return;

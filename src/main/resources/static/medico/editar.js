@@ -9,7 +9,7 @@ fetch(`/medicos/${idMedico}`)
     })
     .then(medico => {
         document.getElementById("idMedico").value = medico.idMedico;
-        document.getElementById("nombre").value = medico.nombres;
+        document.getElementById("nombres").value = medico.nombres;
         document.getElementById("apellidos").value = medico.apellidos;
         document.getElementById("colegiatura").value = medico.colegiatura;
         document.getElementById("telefono").value = medico.telefono;
@@ -23,7 +23,7 @@ document.getElementById("form-editar-medico").addEventListener("submit", async (
     e.preventDefault();
 
     const medico = {
-        nombres: document.getElementById("nombre").value,
+        nombres: document.getElementById("nombres").value,
         apellidos: document.getElementById("apellidos").value,
         colegiatura: document.getElementById("colegiatura").value,
         telefono: document.getElementById("telefono").value,

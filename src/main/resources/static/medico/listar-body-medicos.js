@@ -19,7 +19,7 @@ fetch('/medicos/data')
                 <td>${medico.correo ?? '-'}</td>
                 <td>${medico.estado}</td>
                 <td>
-                    <a href="/medico/editar.html?id=${medico.idMedico}" class="btn-editar">Editar</a>
+                    <a href="/medicos/editar/${medico.idMedico}" class="btn-editar">Editar</a>
                     <button class="btn-eliminar" data-id="${medico.idMedico}">Eliminar</button>
                 </td>
             `;

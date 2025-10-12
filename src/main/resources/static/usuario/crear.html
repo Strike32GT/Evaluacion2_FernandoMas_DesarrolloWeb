@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/usuario/crear.css">
+<div class="usuario-form">
+    <h2>Crear Usuario</h2>
+    <form id="form-crear-usuario">
+
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" id="nombre" required>
+        </div>
+
+
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="text" id="colegiatura" required maxlength="8">
+        </div>
+
+
+        <div class="form-group">
+            <label>Rol:</label>
+            <select id="rol" required>
+                <option value="admin">Admin</option>
+                <option value="medico">Medico</option>
+                <option value="recepcionista">Recepcionista</option>
+                <option value="enfermera">Enfermera</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-crear">Guardar</button>
+    </form>
+</div>

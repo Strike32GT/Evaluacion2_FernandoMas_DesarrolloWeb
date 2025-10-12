@@ -10,7 +10,7 @@ public class Usuario {
     private Long idUsuario;
 
     private String nombreUsuario;
-    private String contrasena;
+    private String password;
 
     @Enumerated(EnumType.STRING)
     private Rol rol;
@@ -36,12 +36,12 @@ public class Usuario {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Rol getRol() {

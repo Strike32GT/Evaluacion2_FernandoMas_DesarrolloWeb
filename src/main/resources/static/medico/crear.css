@@ -1,0 +1,84 @@
+.medico-form {
+    background-color: #fdfdfd;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    animation: aparecer 0.4s ease;
+}
+
+/* === Título === */
+.medico-form h2 {
+    color: #2a9df4;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* === Grupos de campos === */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2a9df4;
+    box-shadow: 0 0 5px rgba(42, 157, 244, 0.5);
+}
+
+/* === Botón principal === */
+.btn-crear {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2a9df4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.btn-crear:hover {
+    background-color: #1d7ac6;
+    transform: scale(1.02);
+}
+
+.btn-crear:active {
+    background-color: #16639d;
+}
+
+/* === Animación sutil === */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
